@@ -10,9 +10,10 @@ of atoms, which naturally expands the number of tunable parameters in the filter
 subspace. By only adapting filter atoms constructed by a small number of parameters, while maintaining the rest of model parameters constant, the proposed
 approach is highly parameter-efficient. 
 
-
+![performance](assets/01_performance.png)
 
 # Usage
+
 
 ### Set up environment
 Install Pytorch
@@ -26,8 +27,19 @@ Load pre-trained models such as ConvNeXt, ViT, Stable Diffusion, and replace the
 > python inject_modules.py
 
 ### Example Code
-This experiment provides different configurations of replacing Conv modules in the DNN. It provides methods for (1) fine-tuning filter atoms $\mathbf{D}$, (2) fine-tuning $\beta$ and $\mathbf{D}_1$, (3) fine-tuning bases in coefficients $\mathbf{D}_c$, (4) fine-tuning $\beta$ and $\mathbf{D}_1$, $\mathbf{D}_c$.
+This experiment provides different configurations of replacing Conv modules in the DNN. It provides various methods:
+
+![methods](assets/02_ft_methods.png)
+
+(1) fine-tuning filter atoms $\mathbf{D}$
+
+(2) fine-tuning $\beta$ and $\mathbf{D}_1$
+
+(3) fine-tuning bases in coefficients $\mathbf{D}_c$
+
+(4) fine-tuning $\beta$ and $\mathbf{D}_1$, $\mathbf{D}_c$.
 > bash run.sh
+
 
 # Citation
 If you find the paper and/or the code helpful, please cite us.
